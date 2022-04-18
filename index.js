@@ -4,16 +4,6 @@
 const API_KEY = "73e7de11543d31d67142354335c5930e";
 
 /**
- * Obtiene la fecha actual del sistema del usuario.
- * ñ
- * @returns Formato de fecha actual del sistema.
- */
-const getDate = () => {
-  let date = new Date();
-  return `${date.getDate}-${("0" + (date.getMonth + 1)).slice(-2)}-${date.getFullYear}`;
-};
-
-/**
  * Obtiene los datos necesarios de la información del clima según la posición (coordenadas) del usuario.
  *
  * @param {*} position del usuario que esté consultando la información.
@@ -28,6 +18,18 @@ const fetchData = (position) => {
 };
 
 /**
+ * Obtiene la fecha actual del sistema del usuario.
+ * ñ
+ * @returns Formato de fecha actual del sistema.
+ */
+const getDate = () => {
+  let date = new Date();
+  return `${date.getDate()} - ${("0" + (date.getMonth() + 1)).slice(
+    -2
+  )} - ${date.getFullYear()}`;
+};
+
+/**
  * Setea la data obtenida del API del clima en los componentes HTML.
  *
  * @param {*} data con los datos del clima.
@@ -35,9 +37,6 @@ const fetchData = (position) => {
 const setWeatherData = (data) => {
   const weatherData = {
     location: data.name,
-    description: data.weather[0].main,
-    humidity: data.main.humidity,
-    pressure: data.main.pressure,
     temperature: data.main.temp,
     date: getDate(),
   };

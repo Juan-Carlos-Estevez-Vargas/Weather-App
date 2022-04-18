@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  background-color: rgb(73, 73, 91);
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 2em;
+}
+h3 {
+  margin: 0;
+  font-weight: normal;
+}
+.container {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  width: 60%;
+  margin: auto;
+  border-radius: 10px;
+}
+.location,
+.description {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.temperature {
+  font-weight: lighter;
+  font-size: 5rem;
+}
+.date {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+.block {
+  margin-left: 20%;
+}
+
+
